@@ -205,8 +205,7 @@ if not df.empty:
     # Reorder columns for clarity
     df = df[['name', 'qualifications', 'research_interests', 'email', 'profiles', 'department']]
 
-# Display the DataFrame
-print(df)
+df = df.rename(columns = {'name' : 'Name', 'qualifications' : 'Qualifications', 'research_interests' : 'Research_Interests', 'email' : 'Email', 'profiles' : 'Academic_Profiles', 'department' : 'Department'})
 
 # Save to CSV for verification
 df.to_csv('faculty_data_all_depts.csv', index=False)
